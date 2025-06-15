@@ -3,7 +3,7 @@ An Express.js web application with EJS templating and MySQL2 integration to perf
   
 Database  
 	•Database name: justPostDB  
-	•Table name: posts
+	•Table name: posts  
 	•Schema:  
            CREATE TABLE posts (  
            id VARCHAR(100) PRIMARY KEY NOT NULL,  
