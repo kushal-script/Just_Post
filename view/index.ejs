@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Post !!</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h1>Just Post !!</h1>
+    <%for(post of  posts) {%>
+        <div class="post">
+            <h3 class="username">@<%=post.username%></h3>
+            <h4 class="content"><%=post.content%></h4>
+            <a href="/post/<%= post.id %>"><button id="more">Read more</button></a>
+            <a href="/post/<%= post.id %>/edit"><button id="edit">Edit Post</button></a>
+            <button id="delete" onclick="deletePost('<%=post.id%>')">Delete Post</button>
+        </div>
+        <%}%>
+        <hr>
+        <a href="http://localhost:3000/post/new"><button id="newPost">New Post</button></a>
+</body>
+<script>
+    async function deletePost(postID){
+        const confirmDelete = confirm("Are you sure you want to delete this post?");
+        if (!confirmDelete) return;
+
+        try{
+            const response = await fetch(`/post/${postID}?_method=DELETE`, {
+                method: 'POST'
+            });
+            if (response.ok) {
+                alert('Post deleted successfully');
+                window.location.href = '/post';
+            } else {
+                alert('Failed to delete the post.');
+            } 
+        }
+        catch (error) {
+            alert('⚠️ Error occurred while deleting the post.');
+            }
+    }
+</script>
+</html>

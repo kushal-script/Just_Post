@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - <%=post.username%></title>
+    <link rel="stylesheet" href="/readMore.css">
+</head>
+<body>
+    <h1 class="username">@<%=post.username%></h1>
+    <div class="post">
+        <h3 class="content"><%=post.content%></h3>
+        <h4 class="moreInfo"><%=post.more%></h4>
+    </div>
+        <hr>
+        <a href="http://localhost:3000/post"><button id="home">Home</button></a>
+</body>
+</html>

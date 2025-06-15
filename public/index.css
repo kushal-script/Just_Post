@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+.post {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.post:hover {
+    transform: scale(1.01);
+}
+
+.username {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 0 0 0.5rem 0;
+}
+
+.content {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 1rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#edit {
+    background-color: #007bff;
+    color: white;
+}
+
+#edit:hover {
+    background-color: #0056b3;
+}
+
+#delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+#delete:hover {
+    background-color: #a71d2a;
+}
+
+#more {
+    background-color: orange;
+    color: rgb(255, 255, 255);
+}
+
+#more:hover {
+    background-color: rgb(193, 125, 0);
+}
+
+#newPost {
+    display: block;
+    margin: 2rem auto;
+    background-color: #28a745;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+#newPost:hover {
+    background-color: #1e7e34;
+}
+
+hr {
+    margin: 3rem 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
